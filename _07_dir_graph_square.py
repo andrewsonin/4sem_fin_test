@@ -1,7 +1,7 @@
 def read_graph(vertex_number, edge_number):
     graph = [[] for i in range(vertex_number)]
     for i in range(edge_number):
-        v1, v2 = list(map(int, input().split()))
+        v1, v2 = map(int, input().split())
         graph[v1].append(v2)
     return graph
 
@@ -24,7 +24,7 @@ def squarify(graph):
                     queue.append((neighbour, time))
     return sq_graph
 
-v, e = list(map(int, input().split()))
+v, e = map(int, input().split())
 my_graph = read_graph(v, e)
 my_graph = squarify(my_graph)
 for v in my_graph:
