@@ -10,4 +10,4 @@ def levenshtein(seq1, seq2):
             A[j][i] = 1 + min(A[j-1][i], A[j][i-1], A[j-1][i-1] - 1 + int(seq1[i-1] != seq2[j-1]))
     return A[-1][-1]
 
-print(levenshtein('маша', 'дура'))
+print(levenshtein('рома', 'оброк'))
